@@ -1,0 +1,12 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav') %>
+<div style="max-width: 700px;margin: 20px auto;">
+    <h1 class="text-center"><%= product.title%></h1><hr>
+    <img src="<%= product.imagePath%>" alt="" width="400px" class=" mx-auto d-block">
+    <p class="fw-bold text-center">$<%= product.price%></p>
+    <p class="text-center"><%= product.description%></p>
+    <button class="btn btn-success btn-sm mx-auto d-block">Buy Item</button>
+
+</div>
+
+<%- include('./partials/end.ejs') %>

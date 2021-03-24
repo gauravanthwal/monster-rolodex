@@ -1,0 +1,18 @@
+<% products.forEach(product => { %>
+<div class="col-sm-6 col-md-4 mt-4">
+  <div class="card" style="max-width: 18rem">
+    <img class="img-responsive" src=<%= product.imagePath %>
+    class="card-img-top" alt="">
+    <div class="card-body">
+      <h5 class="card-title"><%= product.title %></h5>
+      <p class="card-text description"><%= product.description%></p>
+      <div class="clearfix">
+        <p class="price float-start fw-bold me-5">$<%= product.price %></p>
+        <a href="/admin/edit-products/<%=product._id%>" class="btn btn-outline-secondary btn-sm ms-5">Edit</a>
+        <a href="/admin/delete-products/<%=product._id%>" class="btn btn-danger btn-sm  float-end">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% }) %>

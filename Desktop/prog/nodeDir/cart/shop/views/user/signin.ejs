@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs') %>
+
+    <div class="signup" style="max-width: 500px; display: block; margin: 50px auto;">
+        <h1 class="text-center">Sign In</h1>
+        <% if(errorMessage){ %> 
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <%= errorMessage %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <% } %>
+        <form action="/user/signin" method="POST">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input class="form-control mb-2" type="text" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control mb-3" type="password" name="password" id="password">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        <p>Not have an Account? <a href="/user/signup">Register</a></p>
+   </div>
+
+
+<%- include('../partials/end.ejs') %>
